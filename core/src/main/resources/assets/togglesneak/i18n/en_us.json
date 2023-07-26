@@ -16,6 +16,11 @@
       "toggleSneak" : {
         "name" : "ToggleSneak"
       }
+    },
+    "state":{
+      "vanilla": "vanilla",
+      "holding": "holding",
+      "toggled": "t<oggled"
     }
   }
 }

@@ -21,6 +21,7 @@ import net.labymod.api.client.entity.player.ClientPlayer;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidget;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextHudWidgetConfig;
 import net.labymod.api.client.gui.hud.hudwidget.text.TextLine;
+import net.labymod.api.util.I18n;
 import net.labymod.api.util.TextFormat;
 import net.labymod.api.util.bounds.area.RectangleAreaPosition;
 
@@ -95,7 +96,8 @@ public class ToggleSneakHudWidget extends TextHudWidget<TextHudWidgetConfig> {
     }
 
     this.lastSprintState = currentState;
-    this.sprintingLine.updateAndFlush(TextFormat.SNAKE_CASE.toUpperCamelCase(currentState.name()));
+    this.sprintingLine.updateAndFlush(
+        I18n.translate("togglesneak.state." + currentState.name().toLowerCase()));
     this.sprintingLine.setVisible(currentState != State.NO);
   }
 
@@ -105,7 +107,8 @@ public class ToggleSneakHudWidget extends TextHudWidget<TextHudWidgetConfig> {
     }
 
     this.lastSneakState = currentState;
-    this.sneakingLine.updateAndFlush(TextFormat.SNAKE_CASE.toUpperCamelCase(currentState.name()));
+    this.sneakingLine.updateAndFlush(
+        I18n.translate("togglesneak.state." + currentState.name().toLowerCase()));
     this.sneakingLine.setVisible(currentState != State.NO);
   }
 
