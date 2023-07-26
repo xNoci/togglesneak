@@ -18,9 +18,9 @@
       }
     },
     "state":{
-      "vanilla": "vanilla",
-      "holding": "holding",
-      "toggled": "t<oggled"
+      "vanilla": "Vanilla",
+      "holding": "Holding",
+      "toggled": "Toggled"
     }
   }
 }
